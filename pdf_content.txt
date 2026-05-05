@@ -1,0 +1,1638 @@
+Prepared for website planning, UI direction, copywriting and development alignment
+Repixelx Studio
+ WEBSITE ARCHITECTURE MASTER DOCUMENT
+ Novelle
+ Academy of Aesthetics & Laser
+A complete strategy, sitemap, section architecture, design system and starter copywriting
+ plan for a premium Dubai/GCC aesthetic education and treatment website.
+ Prepared for: Novelle | Prepared by: Repixelx Studio
+
+Prepared for website planning, UI direction, copywriting and development alignment
+Repixelx Studio
+Master Contents
+This document is structured as a complete pre-design blueprint. It can be used for client approval, design handoff,
+developer briefing and copywriting alignment.
+Document sections
+Section
+What It Covers
+1. Brand & Strategy
+Novelle positioning, website motive, audiences and conversion goals.
+2. Information Architecture
+Recommended sitemap, page count, navigation logic and CTA hierarchy.
+3. Design System
+Colors, fonts, layout rules, imagery direction, components and motion style.
+4. Page Architecture &
+Copywriting
+Full page-by-page section structure with starter website copy for all main pages.
+5. SEO, Content & Forms
+Page slugs, metadata, tone rules, forms, lead routing and WhatsApp templates.
+6. Technical Architecture
+Build stack, responsive rules, performance, accessibility and future scalability.
+7. Execution Checklist
+Assets required, deliverables, milestones, exclusions and launch QA.
+Website pages included
+No.
+Page
+Primary Purpose
+1
+Home
+Premium entry with dual CTA journey for students and clients.
+2
+About Novelle
+Philosophy, mission, standards and credibility.
+3
+Courses & Training
+Course catalogue, curriculum and learning outcomes.
+4
+Admissions & Enrollment
+Application process and enrollment guidance.
+5
+Aesthetic Treatments
+Consultation-led treatment information and client conversion.
+6
+Gallery / Visual Suite
+Facility, training, treatment and before-after visual proof.
+7
+Contact & Consultations
+Forms, WhatsApp, maps, timings and inquiry routing.
+Recommended website count: 7 pages. Fallback: 6 pages only if Admissions is merged into Contact.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 3
+1. Document Purpose
+This master document defines the full website architecture for Novelle before visual design and development begin.
+It combines brand understanding, sitemap decisions, page-by-page section planning, content direction, copywriting,
+UI guidance, SEO structure, forms, technical notes and future scalability.
+The copy included in this document is polished working copy. It is realistic enough to use in a first website draft, but
+it should be treated as flexible placeholder content until Novelle's team confirms exact courses, treatment names,
+doctor/faculty details, legal disclaimers, clinic timings, location and admissions process.
+The goal is to align the client, designer, developer and content team around one clear blueprint so the website feels
+premium, clinically credible and conversion-focused from the first build.
+Core output: a luxury medical-aesthetic website that positions Novelle as an authoritative institution for aesthetic
+and laser education in Dubai and the GCC, while also supporting lead generation for aesthetic consultations and
+treatments.
+What this document covers
+●
+Brand and positioning summary for Novelle.
+●
+Recommended website sitemap and page count.
+●
+Full section-by-section architecture for every main page.
+●
+Starter copywriting for hero sections, CTAs, cards, FAQs and page bodies.
+●
+Design direction including fonts, colors, spacing, photography and component style.
+●
+Technical architecture including performance, SEO, lead forms, WhatsApp and future portal/payment scalability.
+●
+Asset checklist, content checklist and launch quality checklist.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 4
+2. Brand Understanding
+Novelle is a premium aesthetic and laser education institution with a dual purpose: to train elite practitioners and to
+provide discerning clients with safety-led aesthetic treatments. The website must balance two personalities at the
+same time: the precision of a medical academy and the refinement of a luxury beauty destination.
+The brand should never feel like a regular salon, a generic training center or a low-cost course website. The digital
+experience should feel calm, high-end, structured, trustworthy and aspirational.
+ Innovating Beauty Through Education
+Brand promise
+Novelle is the definitive destination where scientific mastery leads to aesthetic excellence. The website should
+communicate that every course, treatment and consultation is shaped by clinical understanding, ethical practice,
+modern technology and refined results.
+Strategic positioning
+Dimension
+Website Direction
+Education
+Premium academy experience for students who want structured, ethical and practical aesthetic
+training.
+Clinical Care
+Safety-led consultation and treatment journey for clients who want refined aesthetic outcomes.
+Luxury
+Elegant white space, gold highlights, calm motion, premium photography and polished
+typography.
+Authority
+Faculty expertise, curriculum structure, standards, protocols, certification and measurable
+learning outcomes.
+Conversion
+Clear paths for Apply for Training and Book Consultation across the entire website.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 5
+3. Website Motive & Strategic
+Objectives
+The website is not only a digital brochure. It must become Novelle's primary trust-building and lead-generation
+platform. It should explain the institution, attract serious students, support premium treatment inquiries and give
+Novelle a polished digital presence suitable for Dubai and GCC audiences.
+Primary objectives
+●
+Positioning: Make Novelle look like a premium, medically credible and luxury-led academy for aesthetics and laser education.
+●
+Lead generation: Capture student admissions inquiries and client consultation requests through dedicated forms and WhatsApp
+CTAs.
+●
+Trust: Showcase faculty credibility, safety protocols, curriculum depth, facilities, equipment and real training environment.
+●
+Clarity: Separate the journey for students and treatment clients so both audiences find the right information quickly.
+●
+Scalability: Build a foundation that can later support a student portal, payments, online course modules, treatment booking or
+CRM integration.
+Primary audiences
+Audience
+What They Need
+Best CTA
+Aesthetic students /
+practitioners
+Courses, curriculum, certification, faculty, hands-on training,
+admissions guidance
+Apply for Training
+Doctors / nurses / beauty
+professionals
+Clinical credibility, advanced modules, practical exposure, safety
+standards
+Request Course Details
+Treatment clients
+Treatment categories, safety process, consultation, before-after
+proof, appointment booking
+Book Consultation
+Partners / GCC market
+Institutional quality, credibility, expansion potential, professional
+presence
+Contact Novelle
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 6
+NOVELLE WEBSITE MASTER PLAN
+Information
+Architecture
+Sitemap, page count and navigation logic
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 7
+4. Recommended Sitemap
+The earlier proposal mentioned a 6-page website. Because Novelle has two strong business sides - education and
+treatments - the strongest recommendation is a 7-page structure. This gives treatments their own clear space and
+prevents the academy pages from becoming overloaded.
+Recommended structure: 7 pages. If the budget or project scope must remain 6 pages, the Admissions page can
+be merged into Contact & Consultations as an admissions section. However, the premium version should keep it
+separate.
+Recommended 7-page sitemap
+Page
+Purpose
+Primary CTA
+Home
+Premium entry point introducing Novelle's academy and aesthetic
+treatment excellence.
+Apply for Training /
+Book Consultation
+About Novelle
+Philosophy, mission, standards, faculty/medical expertise and institutional
+positioning.
+Meet Novelle /
+Contact Us
+Courses & Training
+Course catalogue, curriculum breakdowns, outcomes and certification
+direction.
+Request Course
+Details
+Admissions & Enrollment
+Application process, eligibility, documents, training formats and next
+steps.
+Apply Now
+Aesthetic Treatments
+Treatment categories, consultation journey, safety-first approach and
+client trust-building.
+Book Consultation
+Gallery / Visual Suite
+Facilities, academy environment, training visuals, treatment rooms and
+before-after gallery.
+View Gallery /
+Inquire
+Contact & Consultations
+Lead hub with forms, WhatsApp, Google Maps, timings and inquiry
+routing.
+Send Inquiry
+6-page fallback option
+If Only 6 Pages Are Allowed
+Recommended Merge
+Admissions & Enrollment
+Merge into Contact & Consultations as a strong 'Apply for Training' section.
+Aesthetic Treatments
+Do not merge unless absolutely required because it is a separate conversion funnel.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 8
+5. Navigation & Conversion Model
+The website must serve two different visitor journeys without confusing either one. The simplest solution is to keep
+two hero CTAs and repeat them across the website in a controlled, premium way.
+Header navigation
+Navigation Item
+Recommended Label
+Notes
+Home
+Home
+Logo click also returns to Home.
+About
+About
+Short, clean label. Avoid long institutional wording in the
+nav.
+Courses
+Courses
+Main student journey.
+Treatments
+Treatments
+Main client journey.
+Gallery
+Gallery
+Visual proof and luxury environment.
+Contact
+Contact
+Forms, WhatsApp, location and timings.
+CTA hierarchy
+CTA Type
+Button Text
+Where Used
+Primary student CTA
+Apply for Training
+Hero, courses, admissions, footer.
+Primary client CTA
+Book Consultation
+Hero, treatments, gallery, contact.
+Secondary CTA
+Explore Courses
+Home, About, Admissions.
+Secondary CTA
+View Treatments
+Home, About, Gallery.
+Quick action
+WhatsApp Novelle
+Sticky mobile action, contact page and footer.
+Mobile UX
+●
+Mobile header should be minimal: logo, menu icon and one compact gold CTA.
+●
+Inside the mobile menu, show both Apply for Training and Book Consultation as separated gold/charcoal buttons.
+●
+Use a sticky bottom action bar only on high-intent pages: Courses, Admissions, Treatments and Contact.
+●
+Avoid too many CTAs in one section. Every screen should feel calm, premium and focused.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 9
+NOVELLE WEBSITE MASTER PLAN
+Design System
+Colors, fonts, visual tone and UI components
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 10
+6. Visual Design Direction
+Novelle's visual direction should be clean, elegant and high-trust. White space must dominate the layout, while gold
+should be used as a refined accent rather than a heavy background color. Charcoal should create authority and
+strong readability.
+The overall feeling should be: premium academy, medical-grade precision, Dubai luxury, scientific clarity and soft
+radiance.
+Colour palette
+Deep Gold
+#D6A85E
+Usage
+logo, luxury accents, headings,
+CTA borders
+Warm Gold
+#FFE27C
+Usage
+soft glow, highlights, badges,
+gradients
+Pale Yellow
+#D3A13F
+Usage
+secondary gold accent, icons,
+small details
+Charcoal
+#121212
+Usage
+authority text, footer, contrast
+sections
+Pure White
+#FFFFFF
+Usage
+medical clarity, clean sections,
+content space
+Correction note for brand guide: the heading should be written as 'Colour Palette, Psychology & Usage' instead of
+'Colour Palleted'.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 11
+7. Typography & Layout System
+Brand typography should use Alice for elegant, premium titles and Poppins for clean, readable body content. The
+website should keep heading lines spacious and avoid compressed blocks of text.
+Typography rules
+Use Case
+Font
+Style Direction
+Logo / large page titles
+Alice
+Elegant serif, high-end and refined. Use for hero titles and
+luxury statements.
+Section headings
+Alice or Poppins SemiBold
+Alice for emotional/luxury sections, Poppins for
+technical/course sections.
+Body text
+Poppins Regular
+Readable, structured and professional.
+Buttons / navigation
+Poppins Medium
+Clean, confident, slightly letter-spaced.
+Cards / course data
+Poppins
+Short labels, strong hierarchy, no long paragraphs inside
+cards.
+Spacing and layout
+●
+Use large vertical spacing between sections, especially on desktop.
+●
+Keep maximum text width controlled. Premium pages should not have long full-width paragraphs.
+●
+Use 2-column layouts for academy/treatment dual sections, curriculum cards and benefit blocks.
+●
+Use soft rounded cards, thin gold borders and minimal shadows.
+●
+Use charcoal sections sparingly for high-impact moments, such as final CTA and footer.
+Imagery style
+●
+Clean clinical photography with warm luxury grading.
+●
+Close-up aesthetic equipment visuals, laser treatment rooms, skin texture, academy training setups and faculty-led sessions.
+●
+Avoid stock images that look like generic salons or beauty parlours.
+●
+Use gold light leaks, soft gradients and subtle glow around premium hero imagery.
+●
+Before-after images must include ethical disclaimers and should not overpromise results.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 12
+8. Component & Interaction
+Direction
+The component system should be minimal and premium. Each component must support clarity, trust and
+conversion. Avoid loud colors, heavy animations, overdecorated cards and cluttered icon grids.
+Core components
+Component
+Design Direction
+Where Used
+Hero module
+Large Alice heading, concise subcopy, dual CTA, soft golden
+radiance visual.
+Home and key pages
+Dual audience card
+Two elegant cards: For Students and For Clients.
+Home
+Course card
+Course title, short outcome, duration placeholder, level, CTA.
+Courses
+Treatment card
+Treatment name, benefit, safety note, consultation CTA.
+Treatments
+Trust badge
+Small gold/white badge with icon and short data point.
+Home/About/Courses
+Faculty card
+Photo, name, role, expertise, short credential line.
+About
+Process timeline
+Numbered step layout with gold lines and clean labels.
+Admissions/Treatments
+Form module
+Minimal fields, strong labels, privacy note, WhatsApp backup
+CTA.
+Contact/Admissions
+Motion style
+●
+Soft fade-in and upward reveal animations only. No aggressive motion.
+●
+Hero petal/laser glow can have a very subtle shimmer effect.
+●
+Cards can reveal in staggered motion with low duration and elegant easing.
+●
+Images can use gentle scale on hover, not dramatic zoom.
+●
+Mobile motion should be lighter for performance and comfort.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 13
+NOVELLE WEBSITE MASTER PLAN
+Page Architecture &
+Copywriting
+Detailed sections and starter website content
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 14
+9. Page 1 - Home
+GOAL
+Create an immediate luxury-institutional impression and split visitors into two journeys: students who want training
+and clients who want aesthetic consultation. The home page must make Novelle feel authoritative, premium and
+scientifically grounded within the first screen.
+Homepage section architecture
+Home Page Flow
+1. Hero - Innovating Beauty Through Education
+2. Dual Journey - For Students / For Clients
+3. Signature Positioning - Clinical Precision Meets Luxury Refinement
+4. Featured Courses
+5. Signature Aesthetic Treatments
+6. Why Novelle
+7. Faculty & Standards Preview
+8. Gallery / Visual Suite Preview
+9. FAQ Preview
+10. Final CTA + Footer
+Hero copy
+Eyebrow: Dubai & GCC Aesthetic and Laser Education
+Headline: Innovating Beauty Through Education
+Subheadline: Novelle is a premium institution for aesthetic and laser education, where clinical precision, ethical
+practice and luxury refinement come together to shape the next generation of practitioners and deliver safety-led
+aesthetic excellence.
+Primary CTA: Apply for Training
+Secondary CTA: Book Consultation
+Micro trust line: Advanced training. Safety-led treatments. Scientific mastery. Refined results.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 15
+Dual journey section copy
+Card
+Copy
+CTA
+For Students
+Learn aesthetic and laser science through structured education, expert guidance
+and practical training designed for modern practitioners.
+Explore
+Courses
+For Clients
+Experience consultation-led aesthetic treatments built on safety, precision and
+refined natural radiance.
+View
+Treatments
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 16
+Home Continued - Section Copy
+Signature positioning section
+Heading: Where Scientific Mastery Leads To Aesthetic Excellence
+Body: Novelle brings together advanced education, clinical protocols and luxury client care under one definitive
+aesthetic destination. Every learning pathway and treatment experience is guided by precision, safety, ethics and
+refined outcomes.
+Featured courses section
+Heading: Featured Aesthetic & Laser Training Programs
+Intro: Explore foundational and advanced programs built to help practitioners understand the science, safety and
+artistry behind aesthetic excellence.
+Course
+Short Card Copy
+Laser Physics & Safety
+Understand laser principles, device safety, skin interaction and professional treatment
+protocols.
+Skin Anatomy & Aesthetic Science
+Build a strong foundation in skin structure, ageing, concerns and clinical assessment.
+Advanced Aesthetic Practice
+Learn treatment planning, consultation flow and refined aesthetic decision-making.
+Signature treatments section
+Heading: Safety-Led Aesthetic Treatments
+Intro: For clients, Novelle offers consultation-led aesthetic care designed to support radiant, refined and
+natural-looking results through careful assessment and professional standards.
+●
+Laser and skin rejuvenation consultations.
+●
+Advanced skincare and resurfacing guidance.
+●
+Pigmentation, texture and glow-focused treatment planning.
+●
+Treatment recommendations based on suitability, safety and desired outcomes.
+Why Novelle section
+Trust Point
+Copy
+Clinical Precision
+Every course and treatment pathway is built around scientific understanding and professional
+protocols.
+Luxury Refinement
+A calm, premium experience designed for discerning students and clients.
+Ethical Standards
+A strong focus on safety, eligibility, informed consent and responsible aesthetic practice.
+Practical Learning
+Training experiences shaped for real-world confidence and professional growth.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 17
+10. Page 2 - About Novelle
+GOAL
+Explain the Novelle philosophy, mission, educational standards and medical-aesthetic credibility. This page should
+make the institution feel serious, premium and trustworthy.
+About page architecture
+About Page Flow
+1. About hero - The Definitive Destination for Aesthetic Excellence
+2. Brand philosophy
+3. Mission, vision and values
+4. Education standards
+5. Clinical and safety approach
+6. Faculty / medical team preview
+7. Dubai & GCC positioning
+8. CTA - Begin Your Novelle Journey
+Hero copy
+Eyebrow: About Novelle
+Headline: Clinical Precision. Luxury Refinement. Aesthetic Mastery.
+Subheadline: Novelle was created to raise the standard of aesthetic and laser education while delivering refined,
+safety-led treatment experiences for clients who value expertise and radiance.
+Philosophy copy
+Heading: Beauty, Guided By Science
+Body: At Novelle, beauty is never approached as a surface-level outcome. It is studied, understood and refined
+through science, anatomy, technology and ethical practice. Our philosophy is to educate with precision and treat
+with responsibility, ensuring every experience reflects professional integrity and high-end care.
+Mission, vision and values
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 18
+Item
+Copy
+Mission
+To train skilled aesthetic and laser practitioners through structured education, clinical insight and ethical
+standards.
+Vision
+To become a leading authority for aesthetic education and safety-led beauty transformation across
+Dubai and the GCC.
+Values
+Precision, safety, ethics, refinement, innovation, confidence and measurable excellence.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 19
+About Continued - Standards &
+Team Copy
+Education standards copy
+Heading: Training Built Around Professional Standards
+Body: Novelle's training environment is designed to help learners understand not only how treatments are
+performed, but why each decision matters. From skin assessment to device safety and client consultation, every
+program emphasizes responsibility, clarity and confidence.
+Clinical approach copy
+Heading: Safety Before Aesthetics
+Body: Every aesthetic journey begins with suitability, informed consultation and realistic expectations. Novelle's
+treatment philosophy prioritizes safety, comfort and refined results over rushed procedures or exaggerated
+promises.
+Faculty / team section placeholder
+Field
+Placeholder Content
+Name
+Dr. / Specialist Name
+Role
+Medical Director / Lead Aesthetic Educator / Laser Specialist
+Expertise
+Laser safety, skin science, treatment planning, clinical aesthetics
+Bio line
+A concise 2-3 line credential summary to be added after client confirmation.
+About page CTA
+Heading: Begin Your Novelle Journey
+Body: Whether you are ready to advance your aesthetic career or explore refined treatment options, Novelle
+welcomes you into a world where education, safety and radiance meet.
+CTA 1: Apply for Training
+CTA 2: Book Consultation
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 20
+11. Page 3 - Courses & Training
+GOAL
+Present Novelle's educational programs in a structured and premium way. This page should help prospective
+students understand the depth of training, learning outcomes, eligibility and next steps.
+Courses page architecture
+Courses & Training Page Flow
+1. Courses hero
+2. Course category filters
+3. Featured programs grid
+4. Curriculum breakdown block
+5. Hands-on training standards
+6. Certification and outcomes
+7. Who should enroll
+8. Course inquiry CTA
+9. Course FAQ
+Hero copy
+Eyebrow: Courses & Training
+Headline: Elite Aesthetic & Laser Education For Modern Practitioners
+Subheadline: Novelle's training programs are designed to build scientific understanding, treatment confidence and
+professional discipline through structured modules, practical exposure and safety-led education.
+CTA: Request Course Details
+Course category filters
+●
+Foundational Aesthetics
+●
+Laser & Device-Based Training
+●
+Skin Science & Treatment Planning
+●
+Advanced Aesthetic Practice
+●
+Professional Safety & Ethics
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 21
+Featured program card copy
+Program
+Description
+Outcome
+Laser Physics & Safety
+A structured introduction to laser principles, wavelength
+behavior, skin interaction, risk management and safety
+protocols.
+Build safe device
+understanding before
+practical application.
+Skin Anatomy & Aesthetic
+Science
+A foundation module covering skin layers, common concerns,
+ageing, barrier function and assessment logic.
+Understand the science
+behind treatment planning.
+Advanced Aesthetics
+Foundation
+A premium learning pathway covering consultation, client
+assessment, aesthetic decision-making and treatment ethics.
+Develop confident and
+responsible practice
+standards.
+Clinical Consultation
+Protocols
+Learn how to assess suitability, communicate expectations,
+document client concerns and structure professional
+consultations.
+Improve client trust and
+safety.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 22
+Courses Continued - Curriculum &
+Outcomes
+Curriculum breakdown copy
+Heading: Structured Learning, From Theory To Confidence
+Body: Every Novelle course should be presented with clear modules so students understand what they will learn,
+how the program is structured and what professional outcomes they can expect.
+Curriculum Block
+Example Content
+Module 1 - Fundamentals
+Aesthetic principles, skin anatomy, safety mindset and consultation foundation.
+Module 2 - Science & Technology
+Laser/device basics, treatment logic, settings awareness and suitability considerations.
+Module 3 - Practical Observation
+Demonstrations, guided observation and treatment room protocols.
+Module 4 - Professional Practice
+Consent, documentation, ethics, post-care and client communication.
+Module 5 - Assessment
+Knowledge review, practical understanding and certificate readiness.
+Learning outcomes copy
+●
+Understand the scientific foundation behind aesthetic and laser procedures.
+●
+Learn safety-led assessment and consultation frameworks.
+●
+Recognize the importance of client suitability, informed consent and realistic expectations.
+●
+Build confidence through structured training and professional guidance.
+●
+Develop an ethical approach to aesthetic decision-making.
+Who should enroll
+This content must be confirmed legally and professionally by Novelle. As a starter draft, the page can say:
+Novelle welcomes aspiring and practicing beauty, wellness, medical and aesthetic professionals who want to build
+a stronger foundation in aesthetic science, laser awareness and professional treatment standards. Eligibility may
+vary by course and will be confirmed during the admissions process.
+Course CTA copy
+Heading: Request The Full Course Guide
+Body: Share your details and our admissions team will guide you through available programs, eligibility, upcoming
+batches and the right training pathway for your goals.
+Button: Request Course Details
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 23
+12. Page 4 - Admissions &
+Enrollment
+GOAL
+Make the student application process feel premium, simple and guided. This page should remove confusion and
+help serious prospects take the next step.
+Admissions page architecture
+Admissions & Enrollment Page Flow
+1. Admissions hero
+2. Who can apply
+3. Enrollment process timeline
+4. Documents and details required
+5. Training formats and batch information
+6. Fee/payment placeholder section
+7. Admissions form
+8. FAQ
+9. Final CTA
+Hero copy
+Eyebrow: Admissions & Enrollment
+Headline: Begin Your Journey Into Aesthetic Excellence
+Subheadline: Apply to Novelle's premium aesthetic and laser training programs and receive guided support from
+course inquiry to enrollment confirmation.
+CTA: Apply Now
+Enrollment process copy
+Step
+Title
+Description
+01
+Submit Inquiry
+Share your details, preferred course interest and professional background.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 24
+02
+Admissions Review
+The Novelle team reviews your inquiry and confirms eligibility or recommended
+program fit.
+03
+Course Guidance
+You receive details on curriculum, schedule, requirements and next steps.
+04
+Enrollment Confirmation
+Once confirmed, your seat is reserved and you receive official training
+information.
+Who can apply copy
+Eligibility should be finalized by Novelle. Suggested starter wording:
+Novelle programs are designed for learners and professionals who are serious about aesthetic education, clinical
+responsibility and refined practice. Some advanced modules may require prior experience, professional
+background or specific qualifications, which will be confirmed during the admissions process.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 25
+Admissions Continued - Form &
+FAQ Copy
+Details required section
+●
+Full name
+●
+Phone number and WhatsApp number
+●
+Email address
+●
+Current profession or educational background
+●
+Course of interest
+●
+Preferred training format or batch timing
+●
+Message / goals
+Training format copy
+Heading: Guided Training Formats
+Body: Novelle can present available training formats such as foundation modules, advanced workshops, hands-on
+intensives and private group training. Exact formats, dates and course duration should be added after Novelle
+confirms the official academic calendar.
+Admissions FAQ starter copy
+Question
+Starter Answer
+Do I need prior experience?
+Eligibility depends on the program. Foundation courses may be suitable for
+beginners, while advanced modules may require prior professional experience.
+Will I receive a certificate?
+Certificate details should be confirmed by Novelle for each course and displayed
+clearly on the final website.
+How do I know which course is right for
+me?
+Submit an inquiry and the admissions team will guide you based on your goals and
+background.
+Are batch dates fixed?
+Upcoming batch schedules should be added once confirmed by Novelle.
+Final CTA copy
+Heading: Ready To Apply?
+Body: Take the first step toward professional aesthetic mastery. Submit your details and the Novelle team will guide
+you through the right training pathway.
+Button: Apply Now
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 26
+13. Page 5 - Aesthetic Treatments
+GOAL
+Create a premium treatment page for clients while maintaining medical responsibility. The page should highlight
+consultation, safety, suitability and natural radiance instead of making exaggerated treatment claims.
+Treatments page architecture
+Aesthetic Treatments Page Flow
+1. Treatments hero
+2. Safety-led consultation approach
+3. Treatment categories
+4. Client journey process
+5. Before-after gallery preview with disclaimer
+6. Why clients choose Novelle
+7. Treatment FAQ
+8. Book consultation CTA
+Hero copy
+Eyebrow: Aesthetic Treatments
+Headline: Refined Aesthetic Care, Guided By Safety And Science
+Subheadline: Novelle offers consultation-led aesthetic treatment experiences designed around professional
+assessment, responsible protocols and radiant, natural-looking outcomes.
+CTA: Book Consultation
+Consultation-first section
+Heading: Every Result Begins With The Right Assessment
+Body: Before any treatment recommendation, Novelle focuses on understanding the client's skin, concerns, history,
+suitability and expectations. This ensures every journey is guided by safety, clarity and professional care.
+Treatment category card copy
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 27
+Category
+Starter Copy
+CTA
+Laser & Device-Based Care
+Professional consultations for laser-led aesthetic concerns with a strong
+focus on suitability and safety.
+Book Laser
+Consultation
+Skin Rejuvenation
+Treatment planning for texture, radiance, glow and overall skin
+refinement.
+Explore Skin Care
+Pigmentation & Tone
+Guided care for uneven tone, visible pigmentation and skin clarity
+concerns.
+Request Assessment
+Acne & Texture Support
+Consultation-led treatment planning for acne-prone skin, post-acne
+marks and uneven texture.
+Book Consultation
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 28
+Treatments Continued - Journey &
+Safety Copy
+Client journey process
+Step
+Title
+Description
+01
+Consultation
+A focused discussion around goals, concerns, suitability and expectations.
+02
+Assessment
+Professional review of skin needs, safety considerations and treatment fit.
+03
+Plan
+A recommended pathway is explained clearly with expected care steps and
+limitations.
+04
+Treatment
+The treatment experience is carried out through safety-led protocols and
+professional guidance.
+05
+Aftercare
+Clients receive post-care instructions and follow-up guidance where required.
+Before-after gallery disclaimer
+Before-after visuals should be used ethically. Suggested website disclaimer:
+Results vary from person to person. Images are shown for educational and illustrative purposes only. A
+consultation is required to determine treatment suitability, expected outcomes and aftercare guidance.
+Treatment FAQ starter copy
+Question
+Starter Answer
+Which treatment is right for me?
+The right treatment depends on your skin, concern, history and goals. Novelle
+recommends beginning with a professional consultation.
+Are results immediate?
+Some treatments may show visible freshness quickly, while others require time and
+multiple sessions. Expectations will be discussed during consultation.
+Is every client suitable?
+No. Suitability is assessed carefully. Safety and responsible recommendations come
+before treatment.
+How do I book?
+Use the Book Consultation form or WhatsApp Novelle for appointment assistance.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 29
+14. Page 6 - Gallery / The Visual Suite
+GOAL
+Use visuals to prove luxury, cleanliness, training quality and treatment credibility. This page should feel like a
+premium visual suite, not a random image dump.
+Gallery page architecture
+Gallery / Visual Suite Page Flow
+1. Gallery hero
+2. Facility showcase
+3. Training environment
+4. Treatment rooms and equipment
+5. Before-after gallery with disclaimer
+6. Student moments / certification
+7. Video reel section
+8. CTA
+Hero copy
+Eyebrow: The Visual Suite
+Headline: Step Inside The Novelle Experience
+Subheadline: Explore Novelle's premium learning environment, treatment spaces, practical training moments and
+visual proof of aesthetic refinement.
+Gallery categories
+Category
+Description
+Academy Environment
+Classrooms, training sessions, demonstrations and student engagement.
+Clinical Spaces
+Treatment rooms, equipment, safety setup and consultation spaces.
+Before & After
+Professional treatment result visuals with proper consent and disclaimers.
+Student Experience
+Certification moments, workshops, hands-on learning and group activities.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 30
+Brand Details
+Luxury interiors, golden accents, signage, close-up details and atmosphere shots.
+Visual direction
+●
+Use large editorial-style images with clean captions.
+●
+Apply filter tabs: All, Academy, Treatments, Facilities, Before & After, Student Life.
+●
+Use a lightbox viewer for desktop and smooth swipe gallery for mobile.
+●
+Keep before-after content separated and clearly labeled.
+●
+Do not overfill this page. It should feel curated, luxurious and trustworthy.
+CTA copy
+Heading: Experience Novelle In Person
+Body: Speak with our team to explore course enrollment, treatment consultation or a guided visit to the Novelle
+environment.
+Buttons: Apply for Training / Book Consultation
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 31
+15. Page 7 - Contact & Consultations
+GOAL
+This is the main lead generation hub. It should make it easy for students and clients to contact Novelle, send
+inquiries, WhatsApp the team, locate the clinic/academy and understand opening hours.
+Contact page architecture
+Contact & Consultations Page Flow
+1. Contact hero
+2. Two inquiry paths - Student / Client
+3. Contact form
+4. WhatsApp and direct contact block
+5. Google Maps section
+6. Clinic / academy hours
+7. Admissions and consultation notes
+8. FAQ / final CTA
+Hero copy
+Eyebrow: Contact Novelle
+Headline: Start With The Right Conversation
+Subheadline: Whether you are exploring aesthetic training or booking a treatment consultation, the Novelle team is
+here to guide your next step with clarity and care.
+Two inquiry paths copy
+Path
+Copy
+CTA
+Student Inquiry
+Interested in aesthetic or laser education? Share your goals and our admissions
+team will guide you through the right program.
+Apply for
+Training
+Client Consultation
+Looking for aesthetic treatment guidance? Book a consultation to understand
+suitability, options and next steps.
+Book Consu
+ltation
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 32
+Contact form fields
+Field
+Required?
+Notes
+Full Name
+Yes
+Basic lead identity.
+Phone / WhatsApp
+Yes
+Primary follow-up channel.
+Email
+Optional/Yes
+Recommended for course leads and formal replies.
+Inquiry Type
+Yes
+Student Training / Treatment Consultation / Partnership / Other.
+Course or Treatment Interest
+Optional
+Dropdown based on final content.
+Message
+Yes
+Short details, goals or preferred timing.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 33
+Contact Continued - Lead Routing
+Lead management notes
+●
+All form submissions should go to a dedicated Novelle email address.
+●
+Student inquiries and treatment inquiries should be tagged separately in the email subject line.
+●
+WhatsApp click-to-chat should use prefilled message templates for faster replies.
+●
+A thank-you message should appear after submission with a clear next step.
+●
+If CRM is added later, form routing should be reusable and scalable.
+Prefilled WhatsApp message templates
+Use Case
+Message Template
+Student
+Hello Novelle, I am interested in your aesthetic and laser training programs. Please share course
+details and admission guidance.
+Client
+Hello Novelle, I would like to book an aesthetic consultation. Please guide me with available
+timings.
+General
+Hello Novelle, I would like to know more about your academy and aesthetic services.
+Thank-you messages
+Form Type
+Success Message
+Student Inquiry
+Thank you for applying. The Novelle admissions team will review your inquiry and contact you
+with the next steps.
+Consultation Inquiry
+Thank you for your request. Our team will contact you to confirm consultation availability and
+guide your next step.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 34
+NOVELLE WEBSITE MASTER PLAN
+SEO, Content & Forms
+Search structure, metadata, lead capture and content governance
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 35
+16. SEO Structure
+SEO should be built into the architecture from the beginning. Novelle should target premium aesthetic education,
+laser training and treatment-related intent across Dubai and the GCC. Final keywords should be validated during
+SEO research, but the structure below gives the developer and content team a clean starting point.
+Recommended page slugs and meta copy
+Page
+Slug
+Meta Title
+Meta Description
+Home
+/
+Novelle - Aesthetic & Laser Education in
+Dubai
+Discover Novelle, a premium academy for
+aesthetic and laser education with
+safety-led aesthetic consultations in
+Dubai and the GCC.
+About
+/about
+About Novelle - Clinical Precision & Luxury
+Aesthetics
+Learn about Novelle's philosophy,
+standards and mission to elevate aesthetic
+education and safety-led beauty
+experiences.
+Courses
+/courses
+Aesthetic & Laser Training Courses -
+Novelle
+Explore Novelle's aesthetic and laser
+training programs, curriculum pathways
+and professional education approach.
+Admissions
+/admissions
+Admissions & Enrollment - Novelle
+Academy
+Apply for Novelle's aesthetic and laser
+education programs and receive guided
+support for enrollment.
+Treatments
+/treatments
+Aesthetic Treatments & Consultations -
+Novelle
+Book consultation-led aesthetic treatment
+guidance focused on safety, refinement
+and radiant results.
+Gallery
+/gallery
+Novelle Gallery - Academy, Treatments &
+Facilities
+View Novelle's premium training
+environment, treatment spaces, facilities
+and visual suite.
+Contact
+/contact
+Contact Novelle - Apply or Book
+Consultation
+Contact Novelle for course admissions,
+aesthetic consultations, WhatsApp
+inquiries, location details and timings.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 36
+17. Content Rules & Tone of Voice
+The writing style should sound premium, calm and credible. Avoid sounding like a sales-heavy beauty clinic. Avoid
+exaggerated claims such as 'guaranteed transformation', 'permanent results' or 'best in the world'. Use language that
+balances aspiration with responsibility.
+Tone principles
+Principle
+How It Should Sound
+Premium
+Elegant, refined and confident without being loud.
+Clinical
+Precise, responsible and structured.
+Educational
+Clear, informative and professional for students.
+Luxury
+Soft, aspirational and visually spacious.
+Ethical
+Safety, suitability and realistic outcomes should be visible in the copy.
+Words to use
+●
+Clinical precision
+●
+Luxury refinement
+●
+Safety-led
+●
+Scientific mastery
+●
+Aesthetic excellence
+●
+Structured education
+●
+Professional standards
+●
+Radiance
+●
+Consultation-led care
+●
+Ethical practice
+Words to avoid
+●
+Cheap, discount, offer-heavy language.
+●
+Guaranteed result promises.
+●
+Overly casual salon wording.
+●
+Crowded paragraphs and hype-heavy copy.
+●
+Medical claims that are not approved by Novelle's professional team.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 37
+18. Forms & Lead Capture
+Architecture
+Forms should feel premium and short. The first goal is to capture quality leads, not overload the visitor with too
+many fields. Complex qualification can happen after the first contact.
+Recommended forms
+Form
+Where
+Fields
+Routing
+Course Inquiry
+Courses and Admissions
+Name, phone, email, course interest, background, message
+Admissions team
+Apply Now
+Admissions
+Name, phone, email, profession, preferred program,
+preferred batch, message
+Admissions team
+Book Consultation
+Home, Treatments,
+Contact
+Name, phone, treatment interest, preferred time, message
+Clinic/client care
+team
+General Contact
+Contact
+Name, phone, email, inquiry type, message
+General inbox
+Form UX rules
+●
+Use clear labels outside input fields, not placeholder-only labels.
+●
+Show inquiry type selection at the top to route the lead properly.
+●
+Keep button text specific: Submit Inquiry, Apply Now, Book Consultation.
+●
+Add privacy note: Your information will be used only to respond to your inquiry.
+●
+Add WhatsApp alternative below each form for quick action.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 38
+NOVELLE WEBSITE MASTER PLAN
+Technical Architecture
+Build foundation, performance, responsiveness and future scalability
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 39
+19. Technical Specifications
+The website should be built as a high-performance, responsive and scalable marketing website. The initial launch
+can remain simple, but the architecture should allow future additions such as student portal, online payments, CRM,
+treatment booking and blog/resources.
+Recommended technical stack
+Layer
+Recommendation
+Reason
+Frontend
+Next.js / React or equivalent modern framework
+Fast performance, SEO, scalability and reusable
+components.
+Styling
+Tailwind CSS or modular design system
+Consistent spacing, responsive design and easy
+component reuse.
+Animations
+Framer Motion or lightweight CSS motion
+Premium smooth reveals without heavy
+performance cost.
+Forms
+Email API / backend form handler
+Reliable lead delivery to client inbox.
+Hosting
+Vercel / Netlify / managed server
+Fast global performance and easy deployment.
+SEO
+Server-rendered metadata, structured page
+hierarchy
+Better visibility and professional page indexing.
+Core features included
+●
+Premium responsive design for mobile, tablet and desktop.
+●
+WhatsApp Business click-to-chat integration.
+●
+Lead forms that route inquiries to Novelle's email.
+●
+On-page SEO setup for titles, descriptions, headings and image alt text.
+●
+Fast-loading architecture with optimized images and reusable components.
+●
+Google Maps embed on contact page.
+●
+Gallery lightbox with mobile-friendly interactions.
+●
+Future-ready structure for student portal, online payments or CRM integration.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 40
+20. Responsive Design Rules
+Novelle's audience will likely browse from mobile first, especially for inquiries and WhatsApp actions. The desktop
+experience should feel editorial and luxurious, while mobile should be clear, fast and conversion-focused.
+Breakpoint guidance
+Device
+Layout Rules
+Mobile
+Single-column sections, large readable headings, sticky inquiry action on high-intent pages, compact
+cards.
+Tablet
+Hybrid 1-2 column layouts, balanced image/text sections, simplified navigation.
+Desktop
+Wide white space, strong editorial grids, visual hierarchy, larger hero modules and curated content
+blocks.
+Accessibility and usability
+●
+Maintain strong contrast between gold text and backgrounds. Do not use light gold body text on white.
+●
+Use charcoal for primary reading content.
+●
+All images should have descriptive alt text.
+●
+Forms should support keyboard navigation and proper input labels.
+●
+Buttons should be large enough for touch interaction on mobile.
+●
+Avoid motion that is too fast or distracting.
+Performance targets
+●
+Optimized images in modern formats where possible.
+●
+Lazy-load gallery and below-the-fold images.
+●
+Avoid heavy video backgrounds on mobile unless compressed and optional.
+●
+Keep first hero fast and stable with no layout shift.
+●
+Use clean code and reusable sections to make future page changes easy.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 41
+21. Future Scalability
+The initial website should be built as a premium marketing and lead-generation website. However, the architecture
+should not block future product features. Below are recommended future additions that can be added after launch.
+Future feature roadmap
+Future Feature
+Purpose
+Architecture Note
+Student Portal
+Course resources, attendance, certificates, training
+updates
+Keep student data separate from
+public marketing pages.
+Online Payments
+Course deposit or booking payment
+Use a verified payment gateway and
+invoice flow.
+Treatment Booking
+Appointment scheduling
+Can integrate Calendly-style booking
+or custom calendar later.
+Blog / Insights
+SEO and thought leadership
+Add resource pages for aesthetic
+education and skincare guidance.
+CRM Integration
+Lead management
+Forms should support tagging from
+day one.
+Multi-language
+Dubai/GCC expansion
+Prepare content architecture for
+English/Arabic if needed later.
+What not to overbuild in phase one
+●
+Do not build a complex portal unless the client confirms exact functionality.
+●
+Do not add online payments until pricing, legal terms and refund policies are finalized.
+●
+Do not add too many pages before core conversion pages are strong.
+●
+Do not use generic treatment claims or unapproved medical content.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 42
+NOVELLE WEBSITE MASTER PLAN
+Execution Checklist
+Assets, deliverables, timeline and launch quality
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 43
+22. Asset & Content Checklist
+Before final website design and development, the following content should be collected or confirmed. The first
+build can use the starter copy from this document, but the final launch needs verified details.
+Required client inputs
+Category
+Needed From Client
+Brand
+Final logo files, preferred logo lockups, brand mark, any official brand guide PDF.
+Courses
+Official course names, duration, pricing if public, eligibility, curriculum, certificate details, upcoming
+batches.
+Faculty
+Names, roles, headshots, credentials, short bios and approved expertise lines.
+Treatments
+Official treatment list, descriptions, suitability notes, disclaimers and consultation rules.
+Gallery
+Facility photos, treatment room photos, training photos, before-after images with consent.
+Contact
+Address, phone, WhatsApp, email, clinic/academy hours, Google Maps link.
+Legal
+Privacy policy, terms, medical disclaimers, consent statement, refunds/payment terms if relevant.
+Photography shot list
+●
+Hero portrait or premium facility visual with soft gold/white lighting.
+●
+Academy classroom/training setup.
+●
+Faculty teaching or consultation interaction.
+●
+Close-up of laser/aesthetic equipment, without unsafe procedure visuals.
+●
+Treatment room detail shots.
+●
+Students during guided practical learning.
+●
+Brand signage, reception, certificates and luxury interior details.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 44
+23. Development Deliverables
+The website development scope should be clearly defined so the client understands what is included in phase one
+and what counts as future additions.
+Phase one deliverables
+●
+7-page premium responsive website based on the approved sitemap.
+●
+Custom homepage with dual CTA journey for students and clients.
+●
+Courses & Training page with structured program cards and curriculum content.
+●
+Admissions page with application form and guided process section.
+●
+Aesthetic Treatments page with consultation-led care structure.
+●
+Gallery page with curated visual categories and lightbox interaction.
+●
+Contact page with forms, WhatsApp integration, maps and hours.
+●
+On-page SEO metadata, heading hierarchy and image alt text setup.
+●
+Performance-optimized responsive frontend.
+●
+Basic form submission routing to email.
+Not included unless separately approved
+●
+Student portal or login system.
+●
+Online course platform or LMS.
+●
+Payment gateway and invoicing flow.
+●
+Custom CRM dashboard.
+●
+Arabic/multi-language version.
+●
+Professional photoshoot, video shoot or copy approval by medical/legal team.
+●
+Ongoing SEO content writing or monthly maintenance beyond agreed support.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 45
+24. Recommended Build Milestones
+A premium website should be built in controlled stages so the design, copy and development remain aligned.
+Milestone plan
+Milestone
+Output
+Approval Needed
+1. Architecture Approval
+Sitemap, pages, section plan and CTA model
+Client approves structure
+2. Content Draft
+Starter copy placed page by page
+Client reviews wording
+and data
+3. Visual Direction
+Homepage design concept, color usage, typography, imagery
+direction
+Client approves design
+style
+4. Full UI Design
+All pages designed desktop and mobile
+Client approves UI
+5. Development
+Responsive website build with forms and interactions
+Internal QA
+6. Client Review
+Client tests live staging link
+Final changes
+7. Launch
+Domain, hosting, SEO checks, performance checks
+Go-live approval
+Revision workflow
+●
+First approval should focus on page structure, not small text edits.
+●
+Second approval should focus on copy accuracy and missing details.
+●
+Design approval should happen before development begins.
+●
+All final contact details, course names and legal disclaimers must be confirmed before launch.
+●
+Medical/aesthetic claims should be reviewed by Novelle's professional team.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 46
+25. Launch Quality Checklist
+Before launch, the website should pass the following checks. This ensures the final product feels premium, works
+correctly and supports lead generation.
+Design QA
+●
+Brand colors match the approved Novelle palette.
+●
+Alice and Poppins are used consistently across the live website.
+●
+Gold is used as an accent, not as overwhelming body text.
+●
+Mobile spacing and button sizes feel premium and usable.
+●
+No section feels overcrowded or generic.
+Content QA
+●
+Course names and details are verified by Novelle.
+●
+Faculty names, bios and credentials are approved.
+●
+Treatment copy is medically responsible and approved.
+●
+Before-after disclaimers are visible where needed.
+●
+All phone numbers, email addresses, timings and map details are correct.
+Technical QA
+●
+All forms submit successfully and emails reach the correct inbox.
+●
+WhatsApp links open with correct prefilled messages.
+●
+Google Maps works on desktop and mobile.
+●
+Pages load quickly and images are optimized.
+●
+SEO titles, descriptions, headings and alt text are set.
+●
+No broken links, missing images or layout shifts.
+
+NOVELLE
+Website Architecture & Content Master Document
+Confidential working document - content can be revised after client feedback
+Page 47
+26. Final Website Summary
+The strongest website direction for Novelle is a 7-page premium structure that clearly communicates both its
+academy and treatment identity. The design should be clean, white-space driven, gold-accented and highly credible.
+The copy should position Novelle as an institution of clinical precision and luxury refinement, not a typical beauty
+brand.
+Final recommended pages: Home, About Novelle, Courses & Training, Admissions & Enrollment, Aesthetic
+Treatments, Gallery / The Visual Suite and Contact & Consultations.
+Core strategic decision
+Use two permanent conversion journeys throughout the website: Apply for Training for students and Book
+Consultation for clients. This keeps the website simple while supporting Novelle's complete business model.
+Final brand line options
+●
+Innovating Beauty Through Education.
+●
+Where Scientific Mastery Leads To Aesthetic Excellence.
+●
+Clinical Precision Meets Luxury Refinement.
+●
+Advanced Aesthetic Education. Safety-Led Beauty Transformation.
+●
+Dubai's Premium Destination For Aesthetic & Laser Education.
+Next step
+After this architecture is approved, the next step is to design the homepage concept first. Once the homepage
+visual language is approved, the remaining pages can be designed and developed using the same section system,
+typography rules, colors and components.
+
