@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses | Novelle Academy of Aesthetics & Laser</title>
+<meta name="description" content="Explore CIBTAC-accredited and specialist courses in beauty therapy, laser & aesthetics, semi-permanent makeup, and body treatments at Novelle Academy.">
+<link href="./Logo%20Novelle/pngs/gradient_logomark@4x.png" rel="icon">
+<link rel="stylesheet" href="./courses.css">
+</head>
+<body>
+
+<!-- ============================================
+     NAVBAR — Edit all links, logo, CTA text here
+     ============================================ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="nav-left">
+      <a href="./">Home</a>
+      <a href="./#about">About</a>
+      <a href="./#services">Services</a>
+      <a href="./#contact">Contact</a>
+    </div>
+    <a href="./" class="nav-logo">
+      <!-- EDIT: Change logo image here -->
+      <img src="./Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png" alt="Novelle Academy">
+    </a>
+    <div class="nav-right">
+      <a href="./#contact" class="nav-cta">
+        <span class="cta-sun"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="white"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="white" stroke-width="1.5"/></svg></span>
+        <!-- EDIT: Change CTA text -->
+        Book Appointment
+      </a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-left').classList.toggle('show')" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="courses-hero">
+  <span class="hero-badge">Accredited Programmes</span>
+  <h1>Our Courses</h1>
+  <p>Industry-recognised qualifications in beauty, aesthetics, and advanced skin science — designed for the next generation of practitioners.</p>
+</section>
+
+<!-- ========== BEAUTY THERAPY ========== -->
+<section class="category-section" id="beauty-therapy">
+  <div class="category-header">
+    <div class="category-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg></div>
+    <h2>Beauty Therapy</h2>
+  </div>
+  <div class="category-divider"></div>
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">CIBTAC Level 1</span></div>
+        <h3>Beauty Therapy Diploma — Level 1</h3>
+        <p>An introduction to professional beauty therapy practice, covering core skills and foundational knowledge for a career in the industry.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Introduction to anatomy &amp; skin science</li>
+          <li>Basic facial treatments &amp; cleansing</li>
+          <li>Eyebrow shaping &amp; lash tinting</li>
+          <li>Manicure &amp; basic nail care</li>
+          <li>Professional ethics &amp; client care</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">CIBTAC Level 2</span></div>
+        <h3>Beauty Therapy Diploma — Level 2</h3>
+        <p>Building on Level 1 with more advanced practical skills and deeper scientific understanding of the skin and body.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Advanced facial &amp; skin treatments</li>
+          <li>Body massage techniques</li>
+          <li>Waxing &amp; hair removal methods</li>
+          <li>Pedicure &amp; nail art</li>
+          <li>Physiology of skin conditions</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">CIBTAC Level 3</span></div>
+        <h3>Beauty Therapy Diploma — Level 3</h3>
+        <p>The highest diploma level, preparing graduates for senior roles, management, or further specialisation in aesthetics and clinical beauty.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Advanced skin analysis &amp; treatment planning</li>
+          <li>Clinical-level facial procedures</li>
+          <li>Electrical treatments &amp; technology</li>
+          <li>Business &amp; salon management</li>
+          <li>Anatomy, pathology &amp; contraindications</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LASER & AESTHETICS ========== -->
+<section class="category-section" id="laser-aesthetics">
+  <div class="category-header">
+    <div class="category-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+    <h2>Laser &amp; Aesthetics</h2>
+  </div>
+  <div class="category-divider"></div>
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">NCLC Certified</span></div>
+        <h3>Laser Hair Removal Technician</h3>
+        <p>Specialised training in laser hair removal technology, safety protocols, and patient care — certified to the international NCLC standard.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Laser physics &amp; technology principles</li>
+          <li>Skin types, tones &amp; contraindications</li>
+          <li>Safety protocols &amp; patient care</li>
+          <li>Hands-on laser device operation</li>
+          <li>Treatment planning &amp; documentation</li>
+          <li>UAE DOH compliance</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Advanced Certificate</span></div>
+        <h3>Diamond Microdermabrasion</h3>
+        <p>A professional course in diamond-tip microdermabrasion — a non-invasive skin resurfacing treatment for rejuvenation and corrective care.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Skin anatomy &amp; resurfacing science</li>
+          <li>Diamond-tip device operation</li>
+          <li>Treatment protocols by skin type</li>
+          <li>Post-treatment care &amp; client guidance</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Advanced Certificate</span></div>
+        <h3>Chemical Peel</h3>
+        <p>Training in cosmetic and medical-grade chemical peeling for skin rejuvenation, pigmentation, acne, and corrective treatments.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Peel chemistry &amp; acid types</li>
+          <li>Skin assessment &amp; candidacy</li>
+          <li>Application techniques by peel depth</li>
+          <li>Aftercare, complications &amp; safety</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Specialist Certificate</span></div>
+        <h3>Hair Restoration Therapy</h3>
+        <p>A focused programme in non-surgical hair restoration treatments, combining trichology principles with advanced therapeutic techniques.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Trichology &amp; hair loss science</li>
+          <li>Scalp analysis &amp; treatment planning</li>
+          <li>Laser &amp; light-based hair restoration</li>
+          <li>Topical &amp; clinical treatment protocols</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Specialist Certificate</span></div>
+        <h3>Electrolysis</h3>
+        <p>The only method of permanent hair removal recognised internationally — covering all three modalities with clinical-level depth.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Galvanic, thermolysis &amp; blend methods</li>
+          <li>Needle insertion &amp; skin anatomy</li>
+          <li>Treatment planning &amp; safety</li>
+          <li>Contraindications &amp; client screening</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Advanced Certificate</span></div>
+        <h3>Cosmeceutical Skincare</h3>
+        <p>An in-depth programme on professional-grade cosmeceutical ingredients, formulations, and evidence-based skincare protocols.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Active ingredients &amp; skin pharmacology</li>
+          <li>Prescriptive skincare regimens</li>
+          <li>Cosmeceutical product knowledge</li>
+          <li>Clinical skin concerns &amp; solutions</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEMI-PERMANENT & SKIN ========== -->
+<section class="category-section" id="semi-permanent">
+  <div class="category-header">
+    <div class="category-icon"><svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div>
+    <h2>Semi-Permanent &amp; Skin</h2>
+  </div>
+  <div class="category-divider"></div>
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">SPMU Certificate</span></div>
+        <h3>Semi-Permanent Makeup (SPMU)</h3>
+        <p>A comprehensive programme in semi-permanent makeup application — covering brows, lips, and eyeliner with professional-grade pigments and equipment.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Colour theory &amp; pigment science</li>
+          <li>Microblading &amp; powder brow techniques</li>
+          <li>Lip blush &amp; full lip colour</li>
+          <li>Lash-line enhancement</li>
+          <li>Skin healing &amp; aftercare</li>
+          <li>Client consultation &amp; contraindications</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BODY TREATMENTS ========== -->
+<section class="category-section" id="body-treatments">
+  <div class="category-header">
+    <div class="category-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+    <h2>Body Treatments</h2>
+  </div>
+  <div class="category-divider"></div>
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Body Specialist</span></div>
+        <h3>LPG Endermologie</h3>
+        <p>Professional training in LPG Endermologie — a patented mechanical stimulation technology for body contouring, cellulite reduction, and skin firmness.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>LPG technology &amp; science</li>
+          <li>Body assessment &amp; treatment mapping</li>
+          <li>Contouring &amp; lymphatic protocols</li>
+          <li>Client care &amp; programme planning</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Body Specialist</span></div>
+        <h3>EMS — Electro Muscle Stimulation</h3>
+        <p>Hands-on training in EMS technology for muscle toning, rehabilitation support, and body sculpting in professional aesthetic settings.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Electrical muscle stimulation science</li>
+          <li>Equipment operation &amp; parameters</li>
+          <li>Treatment protocols &amp; positioning</li>
+          <li>Safety, contraindications &amp; aftercare</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Body Specialist</span></div>
+        <h3>Lymphatic Drainage Massage</h3>
+        <p>A clinical approach to manual and mechanical lymphatic drainage — essential for post-procedure recovery, detoxification, and immune support.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Lymphatic system anatomy &amp; physiology</li>
+          <li>Manual lymphatic drainage (MLD) techniques</li>
+          <li>Post-surgical drainage protocols</li>
+          <li>Contraindications &amp; treatment safety</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-level">Foundation Module</span></div>
+        <h3>Anatomy for Aesthetic Practitioners</h3>
+        <p>A dedicated anatomy module bridging scientific understanding with aesthetic application — essential grounding for all practitioners in the field.</p>
+      </div>
+      <div class="card-modules">
+        <button class="modules-toggle" onclick="toggleModules(this)">View Modules <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="modules-list"><ul>
+          <li>Skeletal &amp; muscular anatomy</li>
+          <li>Skin layers, structures &amp; functions</li>
+          <li>Circulatory &amp; lymphatic systems</li>
+          <li>Pathology relevant to aesthetic practice</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER — Matches Main Site Layout Exactly
+     ============================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <!-- EDIT: Change footer logo -->
+        <img src="./Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png" alt="Novelle Academy">
+        <!-- EDIT: Change description -->
+        <p>Professional dermatology care focused on results, safety, and personalized treatment solutions.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">
+            <span class="footer-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+            FDA Approved
+          </span>
+          <span class="footer-badge">
+            <span class="footer-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10M5 4h14v5a7 7 0 0 1-14 0V4z"/></svg></span>
+            Board Certified
+          </span>
+        </div>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <a href="./" style="text-decoration: underline;">Home</a>
+        <a href="./#about">About Us</a>
+        <a href="./#services">Service</a>
+        <a href="#">Blog</a>
+        <a href="#">404 Error</a>
+      </div>
+      <!-- Column 3: Patients -->
+      <div class="footer-col">
+        <h4>Patients</h4>
+        <a href="./#contact">Contact</a>
+        <a href="./#contact">Appointment</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <!-- Column 4: Contact Info -->
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <!-- EDIT: Change address -->
+        <div class="footer-contact">
+          <span class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <p>123 Medical Plaza, Suite<br>200 New York, NY 10001</p>
+        </div>
+        <!-- EDIT: Change phone -->
+        <div class="footer-contact">
+          <span class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <p>+1 (555) 123-4567</p>
+        </div>
+        <!-- EDIT: Change email -->
+        <div class="footer-contact">
+          <span class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <p>example@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>Designed by <a href="#">Repixelx Studio</a>, Powered by</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Social 1"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a href="#" aria-label="Social 2"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a href="#" aria-label="Social 3"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a href="#" aria-label="Social 4"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </div>
+      <p>© 2026 Novelle. All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleModules(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.course-card').forEach(card => {
+  card.style.opacity = '0'; card.style.transform = 'translateY(30px)';
+  card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(card);
+});
+</script>
+</body>
+</html>
