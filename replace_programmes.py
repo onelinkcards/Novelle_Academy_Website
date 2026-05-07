@@ -44,6 +44,17 @@ replacements = {
     # Button
     "Explore Course": "Explore Courses",
     "View Detail": "Explore Courses",
+    
+    # Approach section
+    "Led by industry specialists": "Led by clinical & aesthetic educators",
+    "Excellence in skin care": "ACADEMY APPROACH",
+    "A clinic committed ": "Science, Skill & Standards in Aesthetics ",
+    "An academy built on science, skill and international standards ": "Science, Skill & Standards in Aesthetics ",
+    "We believe good skin starts with understanding. Every treatment begins with a detailed consultation, a long-term plan, and science-backed care. ": "Al Novelle combines clinical knowledge, aesthetic artistry, and practical training to prepare learners for professional careers in beauty therapy, laser technologies, and advanced aesthetics. ",
+    "Advanced science-backed treatment methods": "CIBTAC and NCLC aligned training pathways",
+    "A highly skilled and certified expert team": "Hands-on learning led by experienced faculty",
+    "Personalized care tailored to your unique skin": "Safety, ethics, and UAE-ready professional standards",
+    "Our Approach": "Discover the Academy",
 }
 
 files = glob.glob("*.mjs")

@@ -245,7 +245,177 @@
     });
   }
 
+  function overrideCourseTexts() {
+    var textMap = {
+      'acne & skin health': 'Beauty Therapy Diplomas',
+      'personalized dermatology care for acne, pigmentation, and long-term skin maintenance.': 'CIBTAC-accredited Level 1 to Level 3 pathways covering beauty therapy, skin science, client care, and professional practice.',
+      'botox & fillers': 'Laser & Aesthetics',
+      'subtle enhancements that refresh your features without changing who you are.': 'Advanced training in laser hair removal, chemical peels, microdermabrasion, electrolysis, and clinical skin science.',
+      'laser treatments': 'Semi-Permanent & Skin',
+      'advanced laser solutions for hair removal, pigmentation, texture, and scars clinical laser solutions.': 'Specialist education in semi-permanent makeup, pigment science, cosmeceutical skincare, consultation, and aftercare.',
+      'anti-aging solutions': 'Body Treatments',
+      'target lines, volume loss, dullness, and tired skin with safe, proven treatments.': 'Professional body treatment training including LPG Endermologie, EMS therapy, lymphatic drainage, and anatomy for aesthetic practitioners.',
+      'view detail': 'Explore Courses',
+      'explore coursess': 'Explore Courses',
+      'explore course': 'Explore Courses',
+      'aesthetic treatments': 'Courses'
+    };
+
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a').forEach(function(node) {
+      if (!node.childNodes || node.childNodes.length === 0) return;
+      
+      // Only process elements whose direct text content matches (to avoid replacing parent elements' innerHTML entirely)
+      for (var i = 0; i < node.childNodes.length; i++) {
+        var child = node.childNodes[i];
+        if (child.nodeType === Node.TEXT_NODE) {
+          var text = (child.nodeValue || '').trim().toLowerCase();
+          // Normalize whitespace
+          text = text.replace(/\s+/g, ' ');
+          
+          if (textMap[text] && child.nodeValue !== textMap[text]) {
+            child.nodeValue = textMap[text];
+          }
+        }
+      }
+    });
+  }
+
+  function overrideCourseLinks() {
+    document.querySelectorAll('a').forEach(function(a) {
+      var text = (a.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      var href = a.getAttribute('href') || '';
+      
+      // If the link text contains our target buttons, or if it's a CMS link, redirect to courses.html
+      if (
+        text.indexOf('explore courses') !== -1 || 
+        text.indexOf('view detail') !== -1 || 
+        text.indexOf('explore coursess') !== -1 ||
+        text.indexOf('enrol now') !== -1 ||
+        href.indexOf('/service/') !== -1 || 
+        href.indexOf('/treatments/') !== -1
+      ) {
+        // Only override if it isn't already courses.html to prevent infinite loops
+        if (href !== './courses.html' && href !== 'courses.html') {
+          a.setAttribute('href', './courses.html');
+          // Some React/Framer routers might need this to force a hard navigation
+          a.setAttribute('target', '_self');
+        }
+      }
+
+      // Redirect "discover the academy" to about.html
+      if (text.indexOf('discover the academy') !== -1 || text.indexOf('our approach') !== -1) {
+        if (href !== './about.html' && href !== 'about.html') {
+          a.setAttribute('href', './about.html');
+          a.setAttribute('target', '_self');
+        }
+      }
+    });
+  }
+
+  function disableProgrammesAccordion() {
+    var accordions = document.querySelectorAll('.framer-1m85ul5'); // "Our Programmes" Accordian container
+    accordions.forEach(function(acc) {
+      // Find all the individual cards inside the accordion
+      var cards = acc.querySelectorAll('.framer-ux5tec');
+      cards.forEach(function(card) {
+         if (card.dataset.accordionDisabled) return; // Only process once
+         card.dataset.accordionDisabled = 'true';
+
+         // Stop click events on the card to prevent accordion from expanding
+         card.addEventListener('click', function(e) {
+            // Allow the click if it's on an anchor tag (like the 'Explore Courses' button)
+            var anchor = e.target.closest('a');
+            if (anchor) {
+                return; // Let the link work!
+            }
+            // Stop the accordion from expanding
+            e.stopPropagation();
+            e.preventDefault();
+         }, true); // Use capture phase
+         
+         // Find and hide the plus icon.
+         // In these cards, there are 2 SVGs: the left icon and the plus icon on the right.
+         var svgs = card.querySelectorAll('svg');
+         if (svgs.length >= 2) {
+             // Keep the first SVG (left icon), hide the second one (plus icon)
+             var plusSvg = svgs[svgs.length - 1];
+             if (plusSvg) {
+                 plusSvg.style.display = 'none';
+                 // Often the SVG is inside a circle wrapper (width ~30-50px)
+                 if (plusSvg.parentElement && plusSvg.parentElement.tagName === 'DIV') {
+                     plusSvg.parentElement.style.opacity = '0';
+                     plusSvg.parentElement.style.pointerEvents = 'none';
+                 }
+             }
+         }
+      });
+    });
+  }
+
+  function injectGlobalStyles() {
+    var styleId = 'novelle-global-overrides';
+    if (document.getElementById(styleId)) return;
+
+    var css = `
+      /* Reduce padding for Our Approach section */
+      .framer-1k8s1rt {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+      }
+      
+      /* Bento Grid Card Styling - Targeted for the 'WHY STUDENTS CHOOSE' section */
+      /* These classes match the card containers in the Bento section */
+      .framer-cl45yp .framer-14j678y,
+      .framer-cl45yp .framer-1395ubc,
+      .framer-cl45yp .framer-bxb16n,
+      .framer-cl45yp .framer-147i9cv,
+      .framer-cl45yp .framer-ec5ouy,
+      .framer-cl45yp .framer-an5fhm,
+      .framer-cl45yp .framer-1pp0deq {
+        /* Use transparent background for cards that have nested images/videos */
+        background: transparent !important; 
+        border: 1px solid rgba(212, 175, 55, 0.15) !important;
+        box-shadow: 0 4px 20px rgba(99, 59, 44, 0.04) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        border-radius: 24px !important;
+        overflow: hidden !important;
+      }
+      
+      /* Specific fix for cards that were looking 'broken' due to solid background */
+      .framer-cl45yp .framer-14j678y, 
+      .framer-cl45yp .framer-bxb16n,
+      .framer-cl45yp .framer-1pp0deq {
+        background: rgba(255, 253, 249, 0.1) !important; /* Semi-transparent cream */
+        backdrop-filter: blur(5px);
+      }
+
+      /* Re-styling the review/programmes ticker container to be visible */
+      .framer-cl45yp .framer-1pp0deq {
+        /* Keep layout as is for tickers */
+      }
+
+      .framer-cl45yp div[data-framer-name="01"]:hover,
+      .framer-cl45yp div[data-framer-name="02"]:hover,
+      .framer-cl45yp div[data-framer-name="Right"] > div > div:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 8px 30px rgba(99, 59, 44, 0.08) !important;
+      }
+
+      /* Fix for 2nd image box mentioned by user */
+      .framer-cl45yp .framer-1395ubc {
+        background: var(--token-1aa7b087-662a-4429-8851-f3e43b7c8356, rgb(255, 253, 249)) !important;
+        max-height: 480px !important;
+      }
+    `;
+
+    var style = document.createElement('style');
+    style.id = styleId;
+    style.appendChild(document.createTextNode(css));
+    document.head.appendChild(style);
+  }
+
   function runAll() {
+    injectGlobalStyles();
     swapMainWordmark();
     swapButtonIcons();
     forceReplaceFramerIconsInButtons();
@@ -254,6 +424,9 @@
     removeTreatmentSectionSideWordmarks();
     removeExplicitWordmarkBadges();
     removeResidualPromoElements();
+    overrideCourseTexts();
+    overrideCourseLinks();
+    disableProgrammesAccordion();
   }
 
   if (document.readyState === 'loading') {
