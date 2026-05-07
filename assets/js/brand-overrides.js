@@ -370,7 +370,7 @@
             }
             e.stopPropagation();
             e.preventDefault();
-         }, true); // Use capture phase
+         }, { capture: true, passive: false }); // Use capture phase and explicitly set passive: false
          
          // Find and hide the plus icon.
          // In these cards, there are 2 SVGs: the left icon and the plus icon on the right.
