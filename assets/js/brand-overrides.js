@@ -290,6 +290,7 @@
         text.indexOf('explore courses') !== -1 || 
         text.indexOf('view detail') !== -1 || 
         text.indexOf('explore coursess') !== -1 ||
+        text.indexOf('explore course') !== -1 ||
         text.indexOf('enrol now') !== -1 ||
         href.indexOf('/service/') !== -1 || 
         href.indexOf('/treatments/') !== -1
@@ -299,6 +300,17 @@
           a.setAttribute('href', './courses.html');
           // Some React/Framer routers might need this to force a hard navigation
           a.setAttribute('target', '_self');
+          
+          // Force click event for tricky Framer elements
+          if (!a.dataset.linkFixed) {
+            a.dataset.linkFixed = 'true';
+            a.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = './courses.html';
+                return false;
+            };
+          }
         }
       }
 
@@ -323,12 +335,14 @@
 
          // Stop click events on the card to prevent accordion from expanding
          card.addEventListener('click', function(e) {
-            // Allow the click if it's on an anchor tag (like the 'Explore Courses' button)
+            var t = (e.target.textContent || '').toLowerCase();
             var anchor = e.target.closest('a');
-            if (anchor) {
-                return; // Let the link work!
+            if (anchor || t.indexOf('explore course') !== -1) {
+                if (t.indexOf('explore course') !== -1) {
+                   window.location.href = './courses.html';
+                }
+                return;
             }
-            // Stop the accordion from expanding
             e.stopPropagation();
             e.preventDefault();
          }, true); // Use capture phase
