@@ -66,6 +66,10 @@
         if (isLargeMedia) return;
 
         if ((width <= 40 && height <= 40) || looksLikeFramerIcon || !src) {
+          // Skip icons that look like slider arrows (prev/next)
+          var alt = (img.getAttribute('alt') || '').toLowerCase();
+          if (alt.indexOf('prev') !== -1 || alt.indexOf('next') !== -1 || alt.indexOf('arrow') !== -1) return;
+
           img.setAttribute('src', buttonLogomark);
           img.setAttribute('data-novelle-button-icon', 'true');
           img.style.objectFit = 'contain';
@@ -258,7 +262,47 @@
       'view detail': 'Explore Courses',
       'explore coursess': 'Explore Courses',
       'explore course': 'Explore Courses',
-      'aesthetic treatments': 'Courses'
+      'aesthetic treatments': 'Courses',
+      'why patients choose us': 'WHY STUDENTS CHOOSE NOVELLE',
+      'care that puts your child first': 'Aesthetic Leaders Start Here',
+      'step inside the novelle experience': 'Step Inside The Al Novelle Experience',
+      '12 weeks': 'Abu Dhabi, UAE',
+      'acne treatment': 'Est. 2026',
+      'skin analysis': 'Guided by Expert Faculty',
+      'expert consultation at no cost': 'Learn through structured guidance from experienced aesthetic and laser educators who bring clinical knowledge, safety protocols, and professional training into every programme.',
+      'seamless client experience': 'Mastering The Art Of Aesthetics',
+      'al novelle brings together beauty therapy, clinical aesthetics, laser technologies, and international training standards to prepare confident professionals for the modern aesthetics industry.': 'Al Novelle brings together beauty therapy, clinical aesthetics, laser technologies, and international training standards to prepare confident professionals for the modern aesthetics industry.',
+      '10+': '2',
+      'years of medical excellence': 'International Accreditations',
+      '2,000+ procedures': 'CIBTAC UK Certified',
+      '50+ treatments': 'NCLC USA Certified',
+      '99%': '14+',
+      '2k+ global trusted customers': 'Professional Programmes. Across beauty therapy, laser aesthetics, semi-permanent makeup, and body treatment education.',
+      'sofia hale': 'International Standards',
+      'the doctors really listened to my concerns and explained every step.': 'Programmes are designed around recognised training pathways, safety-led education, and professional development.',
+      'olivia chen': 'Career-Focused Learning',
+      'i was nervous about aesthetic treatments, but the results look completely natural.': 'Students are supported through practical training, guidance, CPD awareness, and industry-ready skill development.',
+      'priya mehta': 'Abu Dhabi Academy',
+      'professional, clean clinic with advanced technology. the laser treatment was comfortable, and the results.': 'Located in Al Zahiyah, Al Novelle is built for learners seeking premium aesthetic education in the UAE.',
+      'daniel brooks': 'Hands-On Practice',
+      'from consultation to follow-up, the care was exceptional. my skin texture and tone have improved noticeably.': 'Students gain extensive hands-on experience in our fully equipped clinic to ensure readiness for professional practice.',
+      'actress': 'Curriculum',
+      'creative director': 'Support',
+      'product manager': 'Campus',
+      'entrepreneur': 'Training',
+      'request an appointment': 'Speak With Our Admissions Team',
+      'fill out the form below, and we’ll contact you shortly.': 'Choose the programme that matches your goals in beauty therapy, laser technologies, clinical aesthetics, or advanced skin education.',
+      'therapy*': 'Programme of Interest*',
+      'acne care': 'Beauty Therapy',
+      'skin consultation': 'Semi-Permanent Makeup',
+      'i agree to allow the clinic to contact me regarding my appointment.': 'I agree to allow the academy to contact me regarding enrolment.',
+      'book now': 'Enrol Now',
+      'services': 'Courses',
+      'our services': 'Our Courses',
+      'service': 'Course',
+      'our service': 'Our Course',
+      'aesthetic treatments': 'Courses',
+      'explore our services': 'Explore Our Courses'
     };
 
     document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a').forEach(function(node) {
@@ -275,6 +319,39 @@
           if (textMap[text] && child.nodeValue !== textMap[text]) {
             child.nodeValue = textMap[text];
           }
+          // Special case for "Courses" title
+          if (text === 'aesthetic treatments') {
+             child.nodeValue = 'Courses';
+          }
+        }
+      }
+    });
+  }
+
+  function forceLinkFixes() {
+    document.querySelectorAll('a').forEach(function(a) {
+      var text = (a.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      var href = a.getAttribute('href') || '';
+      
+      if (
+        text.indexOf('explore course') !== -1 || 
+        text.indexOf('view detail') !== -1 || 
+        text === 'courses' ||
+        text === 'services' ||
+        text === 'service' ||
+        href.indexOf('/service/') !== -1 || 
+        href.indexOf('/treatments/') !== -1 ||
+        href.indexOf('javascript:void(0)') !== -1 && text.indexOf('course') !== -1
+      ) {
+        if (a.getAttribute('href') !== './courses.html' && a.getAttribute('href') !== 'courses.html') {
+          a.setAttribute('href', './courses.html');
+          a.setAttribute('target', '_self');
+          a.onclick = function(e) {
+             e.preventDefault();
+             e.stopPropagation();
+             window.location.href = './courses.html';
+             return false;
+          };
         }
       }
     });
@@ -292,25 +369,16 @@
         text.indexOf('explore coursess') !== -1 ||
         text.indexOf('explore course') !== -1 ||
         text.indexOf('enrol now') !== -1 ||
+        text === 'courses' ||
+        text === 'services' ||
+        text === 'service' ||
         href.indexOf('/service/') !== -1 || 
         href.indexOf('/treatments/') !== -1
       ) {
         // Only override if it isn't already courses.html to prevent infinite loops
-        if (href !== './courses.html' && href !== 'courses.html') {
+        if (href !== './courses.html' && href !== 'courses.html' && href !== '/courses.html') {
           a.setAttribute('href', './courses.html');
-          // Some React/Framer routers might need this to force a hard navigation
           a.setAttribute('target', '_self');
-          
-          // Force click event for tricky Framer elements
-          if (!a.dataset.linkFixed) {
-            a.dataset.linkFixed = 'true';
-            a.onclick = function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.location.href = './courses.html';
-                return false;
-            };
-          }
         }
       }
 
@@ -324,6 +392,41 @@
     });
   }
 
+  // Global listener to hijack ANY click that looks like it should go to courses
+  function setupGlobalLinkHijack() {
+    var handler = function(e) {
+      var target = e.target.closest('a');
+      if (!target) return;
+
+      var text = (target.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      var href = (target.getAttribute('href') || '').toLowerCase();
+
+      if (
+        text.indexOf('explore course') !== -1 || 
+        text.indexOf('view detail') !== -1 || 
+        text === 'courses' ||
+        text === 'services' ||
+        text === 'service' ||
+        href.indexOf('/service/') !== -1 || 
+        href.indexOf('/treatments/') !== -1 ||
+        (href.indexOf('javascript:void(0)') !== -1 && (text.indexOf('course') !== -1 || text.indexOf('service') !== -1))
+      ) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+        window.location.href = './courses.html';
+        return false;
+      }
+    };
+
+    // Hijack on mousedown (earliest possible) and click
+    window.addEventListener('mousedown', handler, { capture: true });
+    window.addEventListener('click', handler, { capture: true });
+    
+    // Periodically force link fixes for dynamically rendered elements
+    setInterval(forceLinkFixes, 1000);
+  }
+
   function updateFooterDetails() {
     var footerReplacements = {
       '123 medical plaza, suite 200 new york, ny 10001': '1001, LAVG Building, Al Zahiyah (16), Abu Dhabi, UAE',
@@ -332,7 +435,7 @@
       'example@gmail.com': 'drsia87@gmail.com'
     };
 
-    document.querySelectorAll('.footer-contact p, .site-footer p').forEach(function(p) {
+    document.querySelectorAll('.footer-contact p, .site-footer p, footer p, .framer-1l2ust5 p').forEach(function(p) {
       var t = (p.textContent || '').trim().toLowerCase().replace(/\s+/g, ' ');
       for (var key in footerReplacements) {
         if (t.indexOf(key) !== -1) {
@@ -340,6 +443,20 @@
         }
       }
     });
+
+    // Add Training Hours if not present
+    var footerContainer = document.querySelector('.framer-1l2ust5');
+    if (footerContainer && !document.getElementById('novelle-training-hours')) {
+        var hoursDiv = document.createElement('div');
+        hoursDiv.id = 'novelle-training-hours';
+        hoursDiv.style.marginTop = '20px';
+        hoursDiv.style.color = 'inherit';
+        hoursDiv.innerHTML = '<h4 style="margin-bottom: 8px;">Training Hours</h4><p>Sunday - Thursday<br>9:00 am - 6:00 pm</p>';
+        
+        // Find a good place to insert - maybe after the contact details
+        var contactBlock = footerContainer.querySelector('.framer-1lxmr0d') || footerContainer;
+        contactBlock.appendChild(hoursDiv);
+    }
 
     // Special handling for the Training Hours block if it exists
     document.querySelectorAll('h4').forEach(function(h4) {
@@ -350,45 +467,7 @@
   }
 
   function disableProgrammesAccordion() {
-    var accordions = document.querySelectorAll('.framer-1m85ul5'); // "Our Programmes" Accordian container
-    accordions.forEach(function(acc) {
-      // Find all the individual cards inside the accordion
-      var cards = acc.querySelectorAll('.framer-ux5tec');
-      cards.forEach(function(card) {
-         if (card.dataset.accordionDisabled) return; // Only process once
-         card.dataset.accordionDisabled = 'true';
-
-         // Stop click events on the card to prevent accordion from expanding
-         card.addEventListener('click', function(e) {
-            var t = (e.target.textContent || '').toLowerCase();
-            var anchor = e.target.closest('a');
-            if (anchor || t.indexOf('explore course') !== -1) {
-                if (t.indexOf('explore course') !== -1) {
-                   window.location.href = './courses.html';
-                }
-                return;
-            }
-            e.stopPropagation();
-            e.preventDefault();
-         }, { capture: true, passive: false }); // Use capture phase and explicitly set passive: false
-         
-         // Find and hide the plus icon.
-         // In these cards, there are 2 SVGs: the left icon and the plus icon on the right.
-         var svgs = card.querySelectorAll('svg');
-         if (svgs.length >= 2) {
-             // Keep the first SVG (left icon), hide the second one (plus icon)
-             var plusSvg = svgs[svgs.length - 1];
-             if (plusSvg) {
-                 plusSvg.style.display = 'none';
-                 // Often the SVG is inside a circle wrapper (width ~30-50px)
-                 if (plusSvg.parentElement && plusSvg.parentElement.tagName === 'DIV') {
-                     plusSvg.parentElement.style.opacity = '0';
-                     plusSvg.parentElement.style.pointerEvents = 'none';
-                 }
-             }
-         }
-      });
-    });
+    // Logic removed to restore original accordion behavior as requested
   }
 
   function injectGlobalStyles() {
@@ -409,6 +488,99 @@
     document.head.appendChild(style);
   }
 
+  function fixBentoGridHeights() {
+    // Target the "Step Inside" card which should be vertical
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
+      var t = (node.textContent || '').trim().toLowerCase();
+      if (t.indexOf('step inside the al novelle experience') !== -1) {
+        // Find the grid item container
+        var card = node.closest('.framer-14j678y') || node.closest('[data-framer-name="Card"]');
+        if (card) {
+          card.style.setProperty('height', '491.5px', 'important'); 
+          card.style.setProperty('min-height', '491.5px', 'important');
+        }
+        
+        // Find the specific container mentioned in the JS
+        var containers = document.querySelectorAll('.framer-1plgoam-container, .framer-mi54di-container');
+        containers.forEach(function(c) {
+            // Traverse up to find the Framer frame container
+            var cur = c;
+            for (var i = 0; i < 5; i++) {
+                if (!cur) break;
+                if (cur.style && cur.style.height && (cur.style.height.indexOf('483') !== -1 || cur.style.height.indexOf('720') !== -1)) {
+                    cur.style.setProperty('height', '491.5px', 'important');
+                }
+                cur = cur.parentElement;
+            }
+            c.style.setProperty('height', '491.5px', 'important');
+            c.style.setProperty('min-height', '491.5px', 'important');
+        });
+      }
+    });
+
+    // Match "Mastering The Art" card size to the review card
+    var reviewCard = null;
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
+      if (node.textContent.toLowerCase().indexOf('professional programmes') !== -1) {
+        reviewCard = node.closest('.framer-14j678y') || node.closest('[data-framer-name]');
+      }
+    });
+
+    if (reviewCard) {
+      var targetHeight = window.getComputedStyle(reviewCard).height;
+      if (targetHeight === '0px' || targetHeight === 'auto') targetHeight = '483px'; // Default fallback
+      
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
+        if (node.textContent.toLowerCase().indexOf('mastering the art of aesthetics') !== -1) {
+          var masteringCard = node.closest('.framer-14j678y') || node.closest('[data-framer-name]');
+          if (masteringCard) {
+            masteringCard.style.setProperty('height', targetHeight, 'important');
+            masteringCard.style.setProperty('min-height', targetHeight, 'important');
+          }
+        }
+      });
+    }
+  }
+
+  function restoreHandImages() {
+    var leftHandOrig = 'https://framerusercontent.com/images/n8OzbYcYaueWCQCfguvevnR3o.png';
+    var rightHandOrig = 'https://framerusercontent.com/images/wvDPYhnwJe8k3MekkKP9OyZlICg.png';
+    
+    document.querySelectorAll('img').forEach(function(img) {
+      var src = img.getAttribute('src') || '';
+      var alt = (img.getAttribute('alt') || '').toLowerCase();
+      
+      if (src.indexOf('unsplash.com') !== -1 || src.indexOf('images.unsplash.com') !== -1) {
+        if (alt.indexOf('left hand') !== -1) {
+          img.setAttribute('src', leftHandOrig);
+          img.setAttribute('srcset', leftHandOrig);
+        } else if (alt.indexOf('right hand') !== -1) {
+          img.setAttribute('src', rightHandOrig);
+          img.setAttribute('srcset', rightHandOrig);
+        }
+      }
+    });
+  }
+
+  function fixReviews() {
+    var reviewReplacements = [
+      { from: /the doctors really listened/i, to: 'Programmes are designed around recognised training pathways, safety-led education, and professional development.' },
+      { from: /i was nervous about aesthetic/i, to: 'Students are supported through practical training, guidance, CPD awareness, and industry-ready skill development.' },
+      { from: /professional, clean clinic/i, to: 'Located in Al Zahiyah, Al Novelle is built for learners seeking premium aesthetic education in the UAE.' },
+      { from: /from consultation to follow-up/i, to: 'Students gain extensive hands-on experience in our fully equipped clinic to ensure readiness for professional practice.' }
+    ];
+
+    document.querySelectorAll('p, span').forEach(function(node) {
+      if (node.children.length > 0) return;
+      var t = (node.textContent || '').trim();
+      reviewReplacements.forEach(function(r) {
+        if (r.from.test(t)) {
+          node.textContent = r.to;
+        }
+      });
+    });
+  }
+
   function runAll() {
     injectGlobalStyles();
     swapMainWordmark();
@@ -423,6 +595,10 @@
     overrideCourseLinks();
     disableProgrammesAccordion();
     updateFooterDetails();
+    fixBentoGridHeights();
+    restoreHandImages();
+    fixReviews();
+    setupGlobalLinkHijack();
   }
 
   if (document.readyState === 'loading') {
