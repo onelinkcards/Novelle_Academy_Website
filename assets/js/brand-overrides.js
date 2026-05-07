@@ -493,6 +493,11 @@
         opacity: 1 !important;
         visibility: visible !important;
       }
+      /* Force footer links to brand brown */
+      footer a, .site-footer a, [data-framer-name*="Footer"] a, .framer-1l2ust5 a, .framer-1l2ust5 p {
+        color: #4A3728 !important;
+        text-decoration: none !important;
+      }
     `;
 
     var style = document.createElement('style');
