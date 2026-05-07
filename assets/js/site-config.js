@@ -3,27 +3,49 @@
  * Change values here instead of editing multiple scripts.
  */
 (function() {
+  // Auto-detect relative root
+  var path = window.location.pathname;
+  var root = './';
+  if (path.indexOf('/courses/') !== -1) root = '../';
+  
   window.NOVELLE_SITE_CONFIG = {
     routing: {
       origin: "https://dermato-wbs.framer.website",
       allowed: ["https://dermato-wbs.framer.website/"],
-      currentPath: "/",
-      relativeRoot: "./"
+      currentPath: path,
+      relativeRoot: root
     },
     branding: {
-      wordmark: "./Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png",
-      logomark: "./Logo%20Novelle/pngs/gradient_logomark@4x.png",
-      buttonLogomark: "./Logo%20Novelle/pngs/gradient_logomark@4x.png",
+      wordmark: root + "Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png",
+      logomark: root + "Logo%20Novelle/pngs/gradient_logomark@4x.png",
+      buttonLogomark: root + "Logo%20Novelle/pngs/gradient_logomark@4x.png",
       buttonIconScale: 1
     },
     assets: {
-      faviconLight: "./Logo%20Novelle/pngs/gradient_logomark@4x.png",
-      faviconDark: "./Logo%20Novelle/pngs/gradient_logomark@4x.png",
-      appleTouchIcon: "./Logo%20Novelle/pngs/gradient_logomark@4x.png",
-      ogImage: "./Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png",
-      twitterImage: "./Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png"
+      faviconLight: root + "Logo%20Novelle/pngs/gradient_logomark@4x.png",
+      faviconDark: root + "Logo%20Novelle/pngs/gradient_logomark@4x.png",
+      appleTouchIcon: root + "Logo%20Novelle/pngs/gradient_logomark@4x.png",
+      ogImage: root + "Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png",
+      twitterImage: root + "Logo%20Novelle/pngs/wordmark%20_%20gradient@4x.png"
     }
   };
+
+  // Helper to get absolute path from relative site root
+  function getAssetPath(relPath) {
+    var root = window.NOVELLE_SITE_CONFIG.routing.relativeRoot || './';
+    return root + relPath;
+  }
+
+  // Update branding paths to use the helper
+  var b = window.NOVELLE_SITE_CONFIG.branding;
+  b.wordmark = getAssetPath(b.wordmark);
+  b.logomark = getAssetPath(b.logomark);
+  b.buttonLogomark = getAssetPath(b.buttonLogomark);
+
+  var a = window.NOVELLE_SITE_CONFIG.assets;
+  for (var key in a) {
+    a[key] = getAssetPath(a[key]);
+  }
 
   function setAttr(selector, attr, value) {
     if (!value) return;

@@ -63,7 +63,8 @@
         // Replace icon-like assets in clickable elements.
         // Skip clearly large media images.
         var isLargeMedia = width > 80 || height > 80;
-        if (isLargeMedia) return;
+        var alt = (img.getAttribute('alt') || '').toLowerCase();
+        if (isLargeMedia || alt.indexOf('about image') !== -1 || alt.indexOf('skin') !== -1) return;
 
         if ((width <= 40 && height <= 40) || looksLikeFramerIcon || !src) {
           // Skip icons that look like slider arrows (prev/next)
@@ -89,6 +90,9 @@
   function forceReplaceFramerIconsInButtons() {
     if (!buttonLogomark) return;
     document.querySelectorAll('a img[src*="framerusercontent.com/images/"], button img[src*="framerusercontent.com/images/"], [role="button"] img[src*="framerusercontent.com/images/"]').forEach(function(img) {
+      var alt = (img.getAttribute('alt') || '').toLowerCase();
+      if (alt.indexOf('about image') !== -1 || alt.indexOf('skin') !== -1) return;
+      
       img.setAttribute('src', buttonLogomark);
       img.setAttribute('data-novelle-button-icon', 'true');
       img.style.objectFit = 'contain';
@@ -435,11 +439,19 @@
       'example@gmail.com': 'drsia87@gmail.com'
     };
 
-    document.querySelectorAll('.footer-contact p, .site-footer p, footer p, .framer-1l2ust5 p').forEach(function(p) {
+    document.querySelectorAll('.footer-contact p, .site-footer p, footer p, .framer-1l2ust5 p, span, a').forEach(function(p) {
       var t = (p.textContent || '').trim().toLowerCase().replace(/\s+/g, ' ');
       for (var key in footerReplacements) {
         if (t.indexOf(key) !== -1) {
           p.textContent = footerReplacements[key];
+        }
+      }
+      
+      // Remove "Designed by Repixelx Studio"
+      if (t.indexOf('designed by repixelx') !== -1 || t.indexOf('powered by') !== -1) {
+        var host = p.closest('div') || p;
+        if (t.length < 100) { // Ensure we don't remove a whole paragraph if it's just a small credits line
+            p.style.display = 'none';
         }
       }
     });
@@ -475,10 +487,11 @@
     if (document.getElementById(styleId)) return;
 
     var css = `
-      /* Reduce padding for Our Approach section */
-      .framer-1k8s1rt {
-        padding-top: 80px !important;
-        padding-bottom: 80px !important;
+      /* Global fixes */
+      img[alt="About Image"] {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
       }
     `;
 
@@ -489,57 +502,17 @@
   }
 
   function fixBentoGridHeights() {
-    // Target the "Step Inside" card which should be vertical
+    // Only target the specific "Step Inside" bento card to avoid breaking other sections
     document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
       var t = (node.textContent || '').trim().toLowerCase();
       if (t.indexOf('step inside the al novelle experience') !== -1) {
-        // Find the grid item container
         var card = node.closest('.framer-14j678y') || node.closest('[data-framer-name="Card"]');
         if (card) {
           card.style.setProperty('height', '491.5px', 'important'); 
           card.style.setProperty('min-height', '491.5px', 'important');
         }
-        
-        // Find the specific container mentioned in the JS
-        var containers = document.querySelectorAll('.framer-1plgoam-container, .framer-mi54di-container');
-        containers.forEach(function(c) {
-            // Traverse up to find the Framer frame container
-            var cur = c;
-            for (var i = 0; i < 5; i++) {
-                if (!cur) break;
-                if (cur.style && cur.style.height && (cur.style.height.indexOf('483') !== -1 || cur.style.height.indexOf('720') !== -1)) {
-                    cur.style.setProperty('height', '491.5px', 'important');
-                }
-                cur = cur.parentElement;
-            }
-            c.style.setProperty('height', '491.5px', 'important');
-            c.style.setProperty('min-height', '491.5px', 'important');
-        });
       }
     });
-
-    // Match "Mastering The Art" card size to the review card
-    var reviewCard = null;
-    document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
-      if (node.textContent.toLowerCase().indexOf('professional programmes') !== -1) {
-        reviewCard = node.closest('.framer-14j678y') || node.closest('[data-framer-name]');
-      }
-    });
-
-    if (reviewCard) {
-      var targetHeight = window.getComputedStyle(reviewCard).height;
-      if (targetHeight === '0px' || targetHeight === 'auto') targetHeight = '483px'; // Default fallback
-      
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span').forEach(function(node) {
-        if (node.textContent.toLowerCase().indexOf('mastering the art of aesthetics') !== -1) {
-          var masteringCard = node.closest('.framer-14j678y') || node.closest('[data-framer-name]');
-          if (masteringCard) {
-            masteringCard.style.setProperty('height', targetHeight, 'important');
-            masteringCard.style.setProperty('min-height', targetHeight, 'important');
-          }
-        }
-      });
-    }
   }
 
   function restoreHandImages() {
