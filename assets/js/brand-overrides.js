@@ -401,47 +401,6 @@
         padding-top: 80px !important;
         padding-bottom: 80px !important;
       }
-      
-      /* Bento Grid Card Styling - Targeted for the 'WHY STUDENTS CHOOSE' section */
-      /* These classes match the card containers in the Bento section */
-      .framer-cl45yp .framer-1395ubc,
-      .framer-cl45yp .framer-147i9cv,
-      .framer-cl45yp .framer-ec5ouy,
-      .framer-cl45yp .framer-an5fhm,
-      .framer-cl45yp .framer-1pp0deq {
-        /* Use transparent background for cards that have nested images/videos */
-        background: transparent !important; 
-        border: 1px solid rgba(212, 175, 55, 0.1) !important;
-        box-shadow: 0 4px 20px rgba(99, 59, 44, 0.04) !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-        border-radius: 24px !important;
-        overflow: hidden !important;
-      }
-      
-      /* Specific fix for cards that were looking 'broken' due to solid background */
-      /* REVERTED: Removing .framer-14j678y and .framer-bxb16n from here to restore original design */
-      .framer-cl45yp .framer-1pp0deq {
-        background: rgba(255, 253, 249, 0.1) !important; /* Semi-transparent cream */
-        backdrop-filter: blur(5px);
-      }
-
-      /* Re-styling the review/programmes ticker container to be visible */
-      .framer-cl45yp .framer-1pp0deq {
-        /* Keep layout as is for tickers */
-      }
-
-      .framer-cl45yp div[data-framer-name="01"]:hover,
-      .framer-cl45yp div[data-framer-name="02"]:hover,
-      .framer-cl45yp div[data-framer-name="Right"] > div > div:hover {
-        transform: translateY(-4px) !important;
-        box-shadow: 0 8px 30px rgba(99, 59, 44, 0.08) !important;
-      }
-
-      /* Fix for 2nd image box mentioned by user */
-      .framer-cl45yp .framer-1395ubc {
-        background: var(--token-1aa7b087-662a-4429-8851-f3e43b7c8356, rgb(255, 253, 249)) !important;
-        max-height: 480px !important;
-      }
     `;
 
     var style = document.createElement('style');
