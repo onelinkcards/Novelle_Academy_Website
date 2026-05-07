@@ -324,6 +324,31 @@
     });
   }
 
+  function updateFooterDetails() {
+    var footerReplacements = {
+      '123 medical plaza, suite 200 new york, ny 10001': '1001, LAVG Building, Al Zahiyah (16), Abu Dhabi, UAE',
+      'al zahiyah, abu dhabi, united arab emirates': '1001, LAVG Building, Al Zahiyah (16), Abu Dhabi, UAE',
+      '+1 (555) 123-4567': '050 234 8625 / 050 762 9543',
+      'example@gmail.com': 'drsia87@gmail.com'
+    };
+
+    document.querySelectorAll('.footer-contact p, .site-footer p').forEach(function(p) {
+      var t = (p.textContent || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      for (var key in footerReplacements) {
+        if (t.indexOf(key) !== -1) {
+          p.textContent = footerReplacements[key];
+        }
+      }
+    });
+
+    // Special handling for the Training Hours block if it exists
+    document.querySelectorAll('h4').forEach(function(h4) {
+      if (h4.textContent.toLowerCase().indexOf('get in touch') !== -1) {
+         // Maybe add training hours below?
+      }
+    });
+  }
+
   function disableProgrammesAccordion() {
     var accordions = document.querySelectorAll('.framer-1m85ul5'); // "Our Programmes" Accordian container
     accordions.forEach(function(acc) {
@@ -379,16 +404,14 @@
       
       /* Bento Grid Card Styling - Targeted for the 'WHY STUDENTS CHOOSE' section */
       /* These classes match the card containers in the Bento section */
-      .framer-cl45yp .framer-14j678y,
       .framer-cl45yp .framer-1395ubc,
-      .framer-cl45yp .framer-bxb16n,
       .framer-cl45yp .framer-147i9cv,
       .framer-cl45yp .framer-ec5ouy,
       .framer-cl45yp .framer-an5fhm,
       .framer-cl45yp .framer-1pp0deq {
         /* Use transparent background for cards that have nested images/videos */
         background: transparent !important; 
-        border: 1px solid rgba(212, 175, 55, 0.15) !important;
+        border: 1px solid rgba(212, 175, 55, 0.1) !important;
         box-shadow: 0 4px 20px rgba(99, 59, 44, 0.04) !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         border-radius: 24px !important;
@@ -396,8 +419,7 @@
       }
       
       /* Specific fix for cards that were looking 'broken' due to solid background */
-      .framer-cl45yp .framer-14j678y, 
-      .framer-cl45yp .framer-bxb16n,
+      /* REVERTED: Removing .framer-14j678y and .framer-bxb16n from here to restore original design */
       .framer-cl45yp .framer-1pp0deq {
         background: rgba(255, 253, 249, 0.1) !important; /* Semi-transparent cream */
         backdrop-filter: blur(5px);
@@ -441,6 +463,7 @@
     overrideCourseTexts();
     overrideCourseLinks();
     disableProgrammesAccordion();
+    updateFooterDetails();
   }
 
   if (document.readyState === 'loading') {
